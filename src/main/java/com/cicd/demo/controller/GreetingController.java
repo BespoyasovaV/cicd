@@ -1,0 +1,22 @@
+package com.cicd.demo.controller;
+
+/**
+ * @author BespoyasovaV
+ */
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class GreetingController {
+
+    @GetMapping("/hi")
+    public String greeting(Model model) {
+        model.addAttribute("name", "Hello world");
+        return "greeting";
+    }
+
+
+}
